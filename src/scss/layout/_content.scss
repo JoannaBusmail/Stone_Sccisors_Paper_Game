@@ -1,34 +1,40 @@
-.content{
-    display:flex;
-    flex-direction: column;
-    text-align: center;
-   
-    margin-left: 14em;
-    font-family: 'Courier New', Courier, monospace;
-   
 
-  
-}
-.player{
-    margin: 40px 0 0 0;
-}
+.container{
+ display: flex;
+ flex-direction: column;
 
-.instructions{
+
+
+.contentBtns{
+ 
+&__instructions{
     margin: 40px 0 20px 0;
 }
 
-
-.btns__rockBtn{
+&__btns{
+&--rockBtn{
     width: 100px;
     height: 100px;
     
 }
 
-.btns__rockBtn:hover {
+&--rockBtn:hover {
 
     transform: translateY(-6px) scale(1.1);
     transition: transform 0.3s ;
   
   }
+}
+}
 
+.content{
+    justify-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    //margin: 100px 40px 0 80px;
+   
 
+&__player{
+    margin: 40px 0 0 0;
+}
+}
+}

@@ -1,7 +1,7 @@
 'use strict';
 const headerRock = (document.querySelector('.js-imgHeaderStone').src =
-  '../assets/images/rock.png');
+  '../assets/images/rockvertical.png');
 const headerScissors = (document.querySelector('.js-imgHeaderScissors').src =
-  '../assets/images/tijeras.png');
+  '../assets/images/scissorvertical.png');
 const headerPaper = (document.querySelector('.js-imgHeaderPaper').src =
-  'assets/images/paper.png');
+  'assets/images/papervertical.png');

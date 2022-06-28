@@ -1,0 +1,66 @@
+.title{
+  font-family: $font-main;
+  margin: 40px 0 40px 0;
+ text-align: center;
+}
+
+.headerImgs{
+width: 20%;
+display: flex;
+flex-direction: column;
+
+
+&__headerRock{
+  margin-bottom: 20px;
+  position: relative;
+  animation-name: inOutRock;
+  animation-duration:2.5s;
+  animation-delay: 0.5s;
+animation-iteration-count:infinite;
+
+
+}
+
+&__headerScissors{
+  margin-bottom: 20px;
+  position: relative;
+  animation-name: inOutScissors;
+  animation-duration: 2.5s;
+ animation-delay: 1s;
+animation-iteration-count:infinite  ;
+}
+&__headerPaper{
+  margin-bottom: 20px;
+  position: relative;
+  animation-name: inOutPaper;
+  animation-duration: 2.5s;
+  animation-delay: 1.5s;
+animation-iteration-count:infinite  ;
+}
+
+
+}
+
+@keyframes inOutRock{
+  0% {left:-250px}
+
+  50% {left: 0px}
+  100%{left:-250px}
+
+}
+
+@keyframes inOutScissors{
+  0% {left:-250px}
+ 
+  50% {left: 0px}
+  100%{left:-250px}
+
+}
+@keyframes inOutPaper
+{
+  0% {left:-250px}
+
+  50% {left: 0px}
+  100%{left:-250px}
+
+}

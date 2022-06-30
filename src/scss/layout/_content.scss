@@ -2,10 +2,13 @@
 .container{
  display: flex;
  flex-direction: column;
+ justify-content: center;
 
 
 
 .contentBtns{
+    text-align: center;
+    font-family: $font-content;
  
 &__instructions{
     margin: 40px 0 20px 0;
@@ -28,13 +31,39 @@
 }
 
 .content{
-    justify-items: center;
-    font-family: 'Courier New', Courier, monospace;
-    //margin: 100px 40px 0 80px;
+
+    //justify-content: center;
+    font-family: $font-content;
+    text-align: center;
+    margin: 40px 0 0 0;
    
 
 &__player{
     margin: 40px 0 0 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    word-spacing: 5px;
+}
+&__result{
+    margin: 60px 0 40px 0;
+    font-family: $font-content;
+    font-size: 30px;
+    text-align: center;
 }
 }
+
+
+
+
+}
+
+.resultWin {
+    color: rgb(214, 39, 97)
+}
+.resultDraw{
+    color: rgb(246, 217, 58)
+}
+.resultLoose{
+    color: rgb(74, 74, 203)
 }

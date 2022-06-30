@@ -12,14 +12,16 @@ function handleClick(event) {
   userChoice = event.target.id;
   //userChoiceDisplay.innerHTML = userChoice;
   if (userChoice === 'rock') {
-    userChoiceDisplay.innerHTML = `<p>ROCK</p>`;
+    userChoiceDisplay.innerHTML = `<p> ROCK </p>`;
   } else if (userChoice === 'paper') {
-    userChoiceDisplay.innerHTML = `<p>PAPER</p>`;
+    userChoiceDisplay.innerHTML = `<p> PAPER</p>`;
   } else {
-    userChoiceDisplay.innerHTML = `<p>SCISSORS</p>`;
+    userChoiceDisplay.innerHTML = `<p> SCISSORS</p>`;
   }
   computerChoiceOption();
+
   printResult();
+  resultColor();
 }
 
 function computerChoiceOption() {
@@ -27,7 +29,7 @@ function computerChoiceOption() {
   console.log(randomNumber);
   computerChoice = randomNumber;
   if (computerChoice === 3) {
-    computerChoiceDisplay.innerHTML = `<p>ROCK</p>`;
+    computerChoiceDisplay.innerHTML = `<p> ROCK</p>`;
   } else if (computerChoice === 2) {
     computerChoiceDisplay.innerHTML = `<p>PAPER</p>`;
   } else {
@@ -56,5 +58,21 @@ function printResult() {
     result = `YOU LOOSE`;
   }
   resultDisplay.innerHTML = result;
+}
+
+function resultColor() {
+  if (result === `YOU WIN`) {
+    resultDisplay.classList.remove('resultLoose');
+    resultDisplay.classList.remove('resultDraw');
+    resultDisplay.classList.add('resultWin');
+  } else if (result === `YOU LOOSE`) {
+    resultDisplay.classList.remove('resultWin');
+    resultDisplay.classList.remove('resultDraw');
+    resultDisplay.classList.add('resultLoose');
+  } else if (result === `IT'S A DRAW`) {
+    resultDisplay.classList.remove('resultWin');
+    resultDisplay.classList.remove('resultLoose');
+    resultDisplay.classList.add('resultDraw');
+  }
 }
 btns.forEach((btn) => btn.addEventListener('click', handleClick));

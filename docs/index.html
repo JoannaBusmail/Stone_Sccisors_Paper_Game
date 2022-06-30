@@ -2,67 +2,85 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Adalab Web Starter Kit</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stone Paper Scissors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gantari&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./assets/css/main.css" />
-    <link rel="icon" href="./assets/images/favicon.png" />
+    <link rel="headerStone" href="./assets/images/rock.png" />
+    <link rel="headerScissor" href="./assets/images/tijeras.png" />
+    <link rel="headerStone" href="./assets/images/paper.png" />
+    <link rel="btnStone" href="./assets/images/stoneHand.png" />
+    <link rel="btnStone" href="./assets/images/paperHand.png" />
+    <link rel="btnStone" href="./assets/images/scissorHand.png" />
   </head>
-
   <body>
-    <div class="page">
-      <header class="page__header">
-        <img src="./assets/images/logo-adalab.png" alt="Adalab">
-        <h1>Bienvenidos a Adalab</h1>
-      </header>
+    <header class="header">
+      <div class="header__headerImgs">
+        <img
+          src=""
+          alt=""
+          class="header__headerImgs--headerRock js-imgHeaderStone"
+        />
+        <img
+          src=""
+          alt=""
+          class="header__headerImgs--headerScissors js-imgHeaderScissors"
+        />
+        <img
+          src=""
+          alt=""
+          class="header__headerImgs--headerPaper js-imgHeaderPaper"
+        />
+      </div>
+      <div class="header__headerTitles">
+        <h1 class="header__headerTitles--title">Rock Paper Scissors</h1>
+      </div>
+    </header>
 
-      <main class="page__main">
-        <h2>Este es el starter kit de Adalab</h2>
-        <p>Lo usamos para aprender:</p>
-        <ul class="main__list">
-          <li>Sass</li>
-          <li>HTML partials</li>
-          <li>Gulp</li>
-          <li>y muchas cosas más</li>
-        </ul>
-        <p>Si quieres saber cúales son las rutas correctas para:</p>
-        <ul class="main__list">
-          <li>
-            una <code class="code">&lt;img /&gt;</code> mira el fichero
-            <code class="code">./src/html/partials/header.html</code>.
-          </li>
-          <li>
-            y para un <code class="code">background-image</code> mira el fichero
-            <code class="code">./src/html/scss/layout/_page.scss</code>.
-          </li>
-        </ul>
-        <p>
-          Si quieres saber cómo usar un partial HTML dentro de otro partial, busca en la carperta
-          <code class="code">./src/html/index.html</code> y
-          <code class="code">./src/html/partials/main.html</code>, y verás cómo estamos creando estos
-          enlaces:
-        </p>
-        <ul class="main__list">
-          <li>
-            <a class="link__adalab" href="https://adalab.es">Adalab</a>
 
-          </li>
-          <li>
-            <a class="" href="./more-info.html">Más info del starter kit</a>
+    <section class="container">
+      <div class="content">
+        <h2 class="content__subtitle">Computer vs Human!</h2>
+        <h3 class="content__player">
+          Computer:<span class="content__span js_computer"></span>
+        </h3>
+        <h3 class="content__player">
+          Human: <span class="content__span js_user"></span>
+        </h3>
+      </div>
+      <div class="content__result js_result"></div>
+      <div class="contentBtns">
+        <h4 class="contentBtns__instructions">Click on your choice</h4>
+        <div class="contentBtns__btns">
+          <input
+            class="contentBtns__btns--rockBtn js_btn"
+            id="rock"
+            type="image"
+            src="../assets/images/stoneHand.png"
+          />
+          <input
+            class="contentBtns__btns--rockBtn js_btn"
+            id="scissors"
+            type="image"
+            src="../assets/images/scissorHand.png"
+          />
+          <input
+            class="contentBtns__btns--rockBtn js_btn"
+            id="paper"
+            type="image"
+            src="../assets/images/paperHand.png"
+          />
+        </div>
+      </div>
+    </section>
 
-          </li>
-        </ul>
-      </main>
 
-      <footer class="page__footer">
-        <small>
-          &copy; Todos los derechos reservados
-          <a class="link__adalab" href="https://adalab.es">Adalab</a>
-
-        </small>
-      </footer>
-
-    </div>
-    <script src="./assets/js/main.js"></script>
+    <script type="text/Javascript" src="./assets/js/main.js"></script>
   </body>
 </html>
